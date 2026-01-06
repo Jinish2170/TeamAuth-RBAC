@@ -25,12 +25,12 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/teamauth-rbac.git"
+    "url": "https://github.com/Jinish2170/TeamAuth-RBAC.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/teamauth-rbac/issues"
+    "url": "https://github.com/Jinish2170/TeamAuth-RBAC/issues"
   },
-  "homepage": "https://github.com/yourusername/teamauth-rbac#readme",
+  "homepage": "https://github.com/Jinish2170/TeamAuth-RBAC#readme",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"

@@ -37,7 +37,7 @@ A production-ready Role-Based Access Control (RBAC) authentication system built 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/teamauth-rbac.git
+git clone https://github.com/Jinish2170/TeamAuth-RBAC.git
 cd teamauth-rbac
 ```
 
