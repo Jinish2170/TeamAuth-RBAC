@@ -79,6 +79,7 @@ NODE_ENV=development
 Follow the detailed instructions in [DATABASE_SETUP.md](DATABASE_SETUP.md)
 
 Quick setup:
+
 ```bash
 # Run the database setup script
 psql -U your_username -d teamauth_db -f src/scripts/setup_database.sql
@@ -90,11 +91,13 @@ node src/scripts/migrate_passwords.js
 ### 5. Start the Server
 
 **Development mode:**
+
 ```bash
 npm start
 ```
 
 **Production mode:**
+
 ```bash
 npm run prod
 ```
@@ -105,12 +108,12 @@ The server will be running at `http://localhost:3000`
 
 After database setup, you can login with these default accounts:
 
-| Role     | Email                  | Password      |
-|----------|------------------------|---------------|
-| Admin    | alice@company.com      | admin123      |
-| Manager  | bob@company.com        | manager123    |
-| Employee | charlie@company.com    | employee123   |
-| Employee | david@company.com      | employee123   |
+| Role     | Email               | Password    |
+| -------- | ------------------- | ----------- |
+| Admin    | alice@company.com   | admin123    |
+| Manager  | bob@company.com     | manager123  |
+| Employee | charlie@company.com | employee123 |
+| Employee | david@company.com   | employee123 |
 
 **⚠️ Important:** Change these passwords in production!
 
@@ -119,6 +122,7 @@ After database setup, you can login with these default accounts:
 ### Authentication Endpoints
 
 #### Register New User
+
 ```http
 POST /api/auth/register
 Content-Type: application/json
@@ -131,6 +135,7 @@ Content-Type: application/json
 ```
 
 #### Login
+
 ```http
 POST /api/auth/login
 Content-Type: application/json
@@ -142,6 +147,7 @@ Content-Type: application/json
 ```
 
 Response:
+
 ```json
 {
   "message": "Login successful",
@@ -157,6 +163,7 @@ Response:
 ```
 
 #### Get Profile
+
 ```http
 GET /api/auth/profile
 Authorization: Bearer <token>
@@ -165,18 +172,21 @@ Authorization: Bearer <token>
 ### User Management Endpoints
 
 #### Get All Users (Manager/Admin)
+
 ```http
 GET /api/users
 Authorization: Bearer <token>
 ```
 
 #### Get User by ID (Manager/Admin)
+
 ```http
 GET /api/users/:id
 Authorization: Bearer <token>
 ```
 
 #### Create User (Admin Only)
+
 ```http
 POST /api/users
 Authorization: Bearer <token>
@@ -192,6 +202,7 @@ Content-Type: application/json
 ```
 
 #### Update User Role (Admin Only)
+
 ```http
 PUT /api/users/:id/role
 Authorization: Bearer <token>
@@ -204,6 +215,7 @@ Content-Type: application/json
 ```
 
 #### Delete User (Admin Only)
+
 ```http
 DELETE /api/users/:id
 Authorization: Bearer <token>
@@ -211,18 +223,18 @@ Authorization: Bearer <token>
 
 ## 🔑 Role Permissions
 
-| Action                    | Employee | Manager | Admin |
-|---------------------------|----------|---------|-------|
-| Register (self)           | ✅       | ✅      | ✅    |
-| Login                     | ✅       | ✅      | ✅    |
-| View own profile          | ✅       | ✅      | ✅    |
-| View all users            | ❌       | ✅*     | ✅    |
-| View user by ID           | ❌       | ✅*     | ✅    |
-| Create users              | ❌       | ❌      | ✅    |
-| Update user roles         | ❌       | ❌      | ✅    |
-| Delete users              | ❌       | ❌      | ✅    |
+| Action            | Employee | Manager | Admin |
+| ----------------- | -------- | ------- | ----- |
+| Register (self)   | ✅       | ✅      | ✅    |
+| Login             | ✅       | ✅      | ✅    |
+| View own profile  | ✅       | ✅      | ✅    |
+| View all users    | ❌       | ✅\*    | ✅    |
+| View user by ID   | ❌       | ✅\*    | ✅    |
+| Create users      | ❌       | ❌      | ✅    |
+| Update user roles | ❌       | ❌      | ✅    |
+| Delete users      | ❌       | ❌      | ✅    |
 
-*Managers can only view their own team members
+\*Managers can only view their own team members
 
 ## 🗂️ Project Structure
 
@@ -282,17 +294,17 @@ To add new database migrations or modify the schema, update the files in `src/sc
 
 ## 📝 Environment Variables
 
-| Variable        | Description                          | Default     | Required |
-|-----------------|--------------------------------------|-------------|----------|
-| DB_USER         | PostgreSQL username                  | -           | Yes      |
-| DB_HOST         | PostgreSQL host                      | localhost   | Yes      |
-| DB_DATABASE     | Database name                        | -           | Yes      |
-| DB_PASSWORD     | Database password                    | -           | Yes      |
-| DB_PORT         | PostgreSQL port                      | 5432        | Yes      |
-| JWT_SECRET      | Secret key for JWT signing (min 32)  | -           | Yes      |
-| JWT_EXPIRES_IN  | JWT expiration time                  | 24h         | No       |
-| PORT            | Server port                          | 3000        | No       |
-| NODE_ENV        | Environment (development/production) | development | No       |
+| Variable       | Description                          | Default     | Required |
+| -------------- | ------------------------------------ | ----------- | -------- |
+| DB_USER        | PostgreSQL username                  | -           | Yes      |
+| DB_HOST        | PostgreSQL host                      | localhost   | Yes      |
+| DB_DATABASE    | Database name                        | -           | Yes      |
+| DB_PASSWORD    | Database password                    | -           | Yes      |
+| DB_PORT        | PostgreSQL port                      | 5432        | Yes      |
+| JWT_SECRET     | Secret key for JWT signing (min 32)  | -           | Yes      |
+| JWT_EXPIRES_IN | JWT expiration time                  | 24h         | No       |
+| PORT           | Server port                          | 3000        | No       |
+| NODE_ENV       | Environment (development/production) | development | No       |
 
 ## 🤝 Contributing
 
@@ -322,6 +334,7 @@ For support, email your-email@example.com or open an issue in the repository.
 ---
 
 **Made with ❤️ by Jinish**
+
 - Security best practices
 - Clean code architecture
 - Professional error handling
