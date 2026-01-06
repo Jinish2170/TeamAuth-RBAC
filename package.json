@@ -1,0 +1,50 @@
+{
+  "name": "teamauth-rbac",
+  "version": "1.0.0",
+  "description": "Role-Based Access Control (RBAC) authentication system with JWT tokens, Express, and PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "prod": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "authentication",
+    "rbac",
+    "jwt",
+    "express",
+    "postgresql",
+    "nodejs",
+    "role-based-access-control",
+    "api",
+    "rest-api",
+    "backend"
+  ],
+  "author": "Jinish",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/teamauth-rbac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/teamauth-rbac/issues"
+  },
+  "homepage": "https://github.com/yourusername/teamauth-rbac#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemon": "^3.1.11",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "postgres": "^3.4.7",
+    "sequelize": "^6.37.7"
+  }
+}

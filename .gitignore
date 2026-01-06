@@ -1,0 +1,90 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-debug.log*
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Build & Distribution
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.cache/
+
+# Database
+*.sqlite
+*.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env.backup
+
+# Frontend build (if integrated)
+frontend/dist/
+frontend/build/
+frontend/node_modules/
+
+# Backup files
+*.backup
+*.bak
+backup_*.sql
